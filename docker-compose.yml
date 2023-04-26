@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  app:
+    build: ./app
+    container_name: web-ec_container
+    ports:
+      - '3000:3000' 
+    volumes:
+      - .:/app
+    image: app:web-ec
+    command: npm start
+    stdin_open: true
+    tty: true
