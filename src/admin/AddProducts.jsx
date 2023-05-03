@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, FormGroup } from "reactstrap";
 import { toast } from "react-toastify";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/dashboard.css";
+import { ClientService } from "../apis/InitApiService";
 
 const AddProducts = () => {
   const [productName, setProductName] = useState("");
@@ -15,44 +15,26 @@ const AddProducts = () => {
   const [imageUrl, setImageUrl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const est = localStorage.getItem("token");
 
   const addProduct = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-
-    // const product = {
-    //     title: enterTitle,
-    //     shortDesc: enterShortDesc,
-    //     description: enterDescription,
-    //     category: enterCategory,
-    //     price: enterPrice,
-    //     imgUrl: enterProductImg,
-    // };
-
+    const data = {
+      "productName": productName,
+      "productCode": "productCode",
+      "price": price,
+      "description": description,
+      "imageUrl": "./images/demo",
+      "shortDesc": shortDesc,
+      "avgRating": null,
+      "isActive": null,
+    }
     try {
-      const response = await axios.post(
-        "https://ecommerce-web.herokuapp.com/products",
-        JSON.stringify({
-          productName,
-          shortDesc,
-          description,
-          category,
-          qtyStock,
-          price,
-          imageUrl,
-        }),
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      console.log(response);
-      if (response.status === 200) {
-        toast.success("product successfully added!");
-        navigate("/dashboard/all-products");
-      } else {
-        toast.error("Product not added");
-      }
-    } catch (err) {
+      const res = await ClientService.addProduct(data);
+      toast.success("product successfully added!");
+      navigate("/dashboard/all-products");
+    } catch (error) {
       toast.error("Product not added");
     }
     setIsLoading(false);
