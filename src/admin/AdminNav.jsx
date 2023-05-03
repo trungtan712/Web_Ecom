@@ -75,15 +75,15 @@ const AdminNav = () => {
                   onChange={handleSearch}
                 />
                 <span>
-                  <i class="ri-search-line"></i>
+                  <i className="ri-search-line"></i>
                 </span>
               </div>
               <div className="admin__nav-top-right">
                 <span>
-                  <i class="ri-notification-3-line"></i>
+                  <i className="ri-notification-3-line"></i>
                 </span>
                 <span>
-                  <i class="ri-settings-2-line"></i>
+                  <i className="ri-settings-2-line"></i>
                 </span>
               </div>
             </div>

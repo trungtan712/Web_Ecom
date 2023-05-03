@@ -83,19 +83,19 @@ const ProductDetails = () => {
                 <div className="product__rating ">
                   <div>
                     <span>
-                      <i class="ri-star-s-fill"></i>
+                      <i className="ri-star-s-fill"></i>
                     </span>
                     <span>
-                      <i class="ri-star-s-fill"></i>
+                      <i className="ri-star-s-fill"></i>
                     </span>
                     <span>
-                      <i class="ri-star-s-fill"></i>
+                      <i className="ri-star-s-fill"></i>
                     </span>
                     <span>
-                      <i class="ri-star-s-fill"></i>
+                      <i className="ri-star-s-fill"></i>
                     </span>
                     <span>
-                      <i class="ri-star-half-fill"></i>{" "}
+                      <i className="ri-star-half-fill"></i>{" "}
                     </span>
                     <p>({<span>{avgRating}</span>} ratings)</p>
                   </div>
@@ -169,31 +169,31 @@ const ProductDetails = () => {
                             whileTap={{ scale: 1.2 }}
                             onClick={() => setRating(1)}
                           >
-                            1<i class="ri-star-s-fill"></i>{" "}
+                            1<i className="ri-star-s-fill"></i>{" "}
                           </motion.span>
                           <motion.span
                             whileTap={{ scale: 1.2 }}
                             onClick={() => setRating(2)}
                           >
-                            2<i class="ri-star-s-fill"></i>{" "}
+                            2<i className="ri-star-s-fill"></i>{" "}
                           </motion.span>
                           <motion.span
                             whileTap={{ scale: 1.2 }}
                             onClick={() => setRating(3)}
                           >
-                            3<i class="ri-star-s-fill"></i>{" "}
+                            3<i className="ri-star-s-fill"></i>{" "}
                           </motion.span>
                           <motion.span
                             whileTap={{ scale: 1.2 }}
                             onClick={() => setRating(4)}
                           >
-                            4<i class="ri-star-s-fill"></i>{" "}
+                            4<i className="ri-star-s-fill"></i>{" "}
                           </motion.span>
                           <motion.span
                             whileTap={{ scale: 1.2 }}
                             onClick={() => setRating(5)}
                           >
-                            5<i class="ri-star-s-fill"></i>{" "}
+                            5<i className="ri-star-s-fill"></i>{" "}
                           </motion.span>
                         </div>
 

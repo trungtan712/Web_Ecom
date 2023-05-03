@@ -67,7 +67,7 @@ const Footer = () => {
               <ListGroup className="footer__contact">
                 <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-2">
                   <span>
-                    <i class="ri-map-pin-line"></i>
+                    <i className="ri-map-pin-line"></i>
                   </span>
                   <p>
                     273 Đ. An D. Vương, Phường 3, Quận 5, Thành phố Hồ Chí Minh
@@ -75,13 +75,13 @@ const Footer = () => {
                 </ListGroupItem>
                 <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-2">
                   <span>
-                    <i class="ri-phone-line"></i>
+                    <i className="ri-phone-line"></i>
                   </span>
                   <p>0931235123</p>
                 </ListGroupItem>
                 <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-2">
                   <span>
-                    <i class="ri-mail-line"></i>
+                    <i className="ri-mail-line"></i>
                   </span>
                   <p>phonestore@gmail.com</p>
                 </ListGroupItem>

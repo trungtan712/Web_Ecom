@@ -15,6 +15,7 @@ import ProductsList from "../components/Ul/ProductsList";
 import Clock from "../components/Ul/Clock";
 
 import counterImg from "../assets/images/counter-timer-img.png";
+import { ClientService } from "../apis/InitApiService";
 
 const Home = () => {
   const [trendingProducts, setTrendingProducts] = useState([]);
@@ -39,6 +40,18 @@ const Home = () => {
     setBestsalesProducts(filterdedBestsalesProducts);
     setAccessories(filterdedAccessories);
   }, []);
+
+  useEffect(() => {
+    getListAll();
+  }, [])
+
+  const getListAll = async () => {
+    try {
+      const res = await ClientService.getProduct();
+    } catch (error) {
+      throw error;
+    }
+  }
 
   return (
     <Helmet title={"Home"}>
