@@ -129,7 +129,7 @@ const Header = () => {
               </span>
               <div className="profile">
                 <span  onClick={()=>setShowTip(!showTip)}>
-                  <i class="ri-settings-5-line"></i>
+                  <i className="ri-settings-5-line"></i>
                 </span>
                     {showTip && 
                     <div
